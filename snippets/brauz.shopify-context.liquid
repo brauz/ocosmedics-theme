@@ -1,0 +1,18 @@
+<script>
+  window.Brauz_shopify_context = {
+    domain: {{ shop.permanent_domain | json }},
+    is_logged_in: !!{{ customer.id | json }},
+    pathname: window.location.pathname,
+    customer: {% if customer %}{
+      id: {{ customer.id | json }},
+      first_name: {{ customer.first_name | json }},
+      last_name: {{ customer.last_name | json }},
+      email: {{ customer.email | json }},
+      phone_number: {{ customer.phone | default: customer.default_address.phone | json }},
+      metafields: {
+        my_clinic_id: {{ customer.metafields.custom.my_clinic_id | json }},
+        my_clinic: {{ customer.metafields.custom.my_clinic | json }}
+      }
+    }{% else %}null{% endif %}
+  };
+</script>
