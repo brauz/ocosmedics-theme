@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "clinic_finder": {
+      "type": "clinic-finder",
+      "blocks": {},
+      "block_order": []
+    }
+  },
+  "order": ["clinic_finder"]
+}

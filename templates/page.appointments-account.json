@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "appointments_account": {
+      "type": "appointments-account",
+      "blocks": {},
+      "block_order": []
+    }
+  },
+  "order": ["appointments_account"]
+}

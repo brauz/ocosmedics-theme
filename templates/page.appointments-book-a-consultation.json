@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "appointments_book_a_consultation": {
+      "type": "appointments-book-a-consultation",
+      "blocks": {},
+      "block_order": []
+    }
+  },
+  "order": ["appointments_book_a_consultation"]
+}
