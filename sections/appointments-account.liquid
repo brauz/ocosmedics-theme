@@ -1,0 +1,13 @@
+{% if customer %}
+  {%- render 'brauz.shopify-context' -%}
+  {%- render 'brauz.appointment' -%}
+
+  <div id="brauz-booking-manager-widget"></div>
+
+{% else %}
+  <div>This page requires login to access</div>
+{% endif %}
+
+{% schema %}
+  {"name": "Appointments - Account"}
+{% endschema %}
