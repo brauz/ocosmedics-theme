@@ -1,11 +1,4 @@
 {%- render 'brauz.shopify-context' -%}
-<script>
-  window.Brauz_shopify_context = window.Brauz_shopify_context || {};
-  window.Brauz_shopify_context.clinic_finder = {
-    heading: {{ section.settings.heading | json }},
-    sub_heading: {{ section.settings.sub_heading | json }}
-  };
-</script>
 
 {% comment %} development {% endcomment %}
 <script src="https://d3aq2u4yw77ivo.cloudfront.net/find-in-store/shopify/inskincosmedics/find-in-store.shopify.inskincosmedics.dev.js" async></script>
@@ -18,20 +11,5 @@
 </div>
 
 {% schema %}
-  {
-    "name": "Clinic Finder",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading",
-        "default": "Clinic Finder"
-      },
-      {
-        "type": "text",
-        "id": "sub_heading",
-        "label": "Sub Heading"
-      }
-    ]
-  }
+  {"name": "Clinic Finder"}
 {% endschema %}
