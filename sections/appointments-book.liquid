@@ -1,8 +1,23 @@
 {%- render 'brauz.shopify-context' -%}
+<script>
+  window.Brauz_shopify_context = window.Brauz_shopify_context || {};
+  window.Brauz_shopify_context.book_a_consultation = {
+    hero_image_url: {% if section.settings.hero_image %}{{ section.settings.hero_image | image_url | json }}{% else %}null{% endif %}
+  };
+</script>
 {%- render 'brauz.appointment' -%}
 
 <div id="brauz-booking-widget"></div>
 
 {% schema %}
-  {"name": "Book a Consultation"}
+  {
+    "name": "Book a Consultation",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "hero_image",
+        "label": "Hero Image"
+      }
+    ]
+  }
 {% endschema %}
